@@ -22,15 +22,16 @@ require_relative("../river.rb")
 
 class TestEco_System < MiniTest::Test
   def setup
-    @river = River.new("Amazon", ["Jim"])
     @fish_1 = Fish.new("Jones")
+    @river = River.new("Amazon", [@fish_1])
     @bear = Bear.new("Yogi")
   end
 
-#Test 1
+#Test 1 & 2
   def test_bear_takes_fish
-    result = @bear.bear_takes_fish(@fish_1)
-    assert_equal(1, result)
+    @bear.take_fish_from_river(@river)
+    assert_equal(1, @bear.get_stomach_length())
+    assert_equal(0, @river.fish_pop.length)
   end
 
 

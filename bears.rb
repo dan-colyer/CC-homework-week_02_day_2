@@ -1,14 +1,18 @@
 class Bear
-  attr_accessor :name
+  attr_accessor :name, :stomach
 
   def initialize(name)
     @name = name
     @stomach = []
   end
 
-  def bear_takes_fish(fish)
+  def take_fish_from_river(river)
+    fish = river.get_fish()
     @stomach << fish
-    return @stomach.count
+  end
+
+  def get_stomach_length
+    return @stomach.length
   end
 
 end
