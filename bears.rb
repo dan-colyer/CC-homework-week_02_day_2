@@ -15,4 +15,8 @@ class Bear
     return @stomach.length
   end
 
+  def bear_roar
+    return "Roar"
+  end
+
 end
