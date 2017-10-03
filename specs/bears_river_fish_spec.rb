@@ -34,8 +34,14 @@ class TestEco_System < MiniTest::Test
     assert_equal(0, @river.fish_pop.length)
   end
 
+# Test 3
   def test_bear_roar
     assert_equal("Roar", @bear.bear_roar)
+  end
+
+# Test 4
+  def test_river_fish_count
+    assert_equal(1, @river.river_fish_count)
   end
 
 

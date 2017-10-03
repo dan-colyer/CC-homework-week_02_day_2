@@ -11,4 +11,10 @@ def get_fish()
 end
 
 
+def river_fish_count
+  @fish_pop.count  
+end
+
+
+
 end
